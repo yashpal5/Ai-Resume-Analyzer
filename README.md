@@ -1,87 +1,123 @@
-# Welcome to React Router!
+```md
+# AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A tool that uses AI techniques to analyze resumes (CVs) and provide insights, feedback, or automated evaluation.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🧭 Features
 
-## Features
+- Parse user resume (PDF, DOCX, or text)  
+- Extract key fields (education, skills, experience)  
+- Score or rank resumes based on criteria (e.g. matching job description)  
+- Provide feedback on weaknesses or suggestions  
+- Web UI / frontend to upload resume and view analysis  
+- (Optional) REST API endpoint for programmatic use  
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 📁 Project Structure
 
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
 ```
 
-### Development
+Ai-Resume-Analyzer/
+├── app/                     # Backend / AI processing logic
+├── public/                  # Public / static assets (images, CSS)
+├── constants/               # Configs, constants, enumerations
+├── types/                   # Type definitions (TypeScript / interfaces)
+├── package.json             # Project dependencies & scripts
+├── tsconfig.json            # TypeScript configuration
+├── vite.config.ts           # Build / bundler config
+├── react-router.config.ts   # Frontend routing setup
+├── .gitignore
+├── Dockerfile                # Docker configuration
+└── README.md                 # This file
 
-Start the development server with HMR:
+````
 
-```bash
-npm run dev
-```
+## 🚀 Getting Started
 
-Your application will be available at `http://localhost:5173`.
+### Prerequisites
 
-## Building for Production
+- Node.js (≥ 14.x) / npm or yarn  
+- (Optional) Docker  
 
-Create a production build:
+### Setup & Run Locally
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/yashpal5/Ai-Resume-Analyzer.git
+   cd Ai-Resume-Analyzer
+````
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run in development mode:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser to `http://localhost:3000` (or configured port) to access the UI.
+
+### Build & Production
 
 ```bash
 npm run build
+# or
+yarn build
 ```
-
-## Deployment
 
 ### Docker Deployment
 
-To build and run using Docker:
-
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t ai-resume-analyzer .
+docker run -p 3000:3000 ai-resume-analyzer
 ```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+## 🧪 Usage Examples
+
+* Upload a resume file and view parsed fields
+* Generate a score / feedback report
+* API: POST `/analyze` with resume file → response with analysis JSON
+
+*(Add code snippets or screenshots here as needed.)*
+
+---
+
+## 📊 Technical Stack
+
+* **Frontend**: React, TypeScript, React Router
+* **Backend / AI**: puter
+* **Build Tool**: Vite
+* **Containerization**: Docker
+
+---
+
+## 🧩 Future Improvements
+
+* Add support for more resume formats (PDF image-based)
+* Improve scoring algorithm / ML model
+* Integrate job description matching
+* Add authentication & dashboards for recruiters
+
+---
+
+## ❤️ Made With Love by Team ARYA
+
+**Team Members**
+
+1. Yashpal
+2. Ayush Pratap Singh
+3. Rudra Pratap Singh Rathore
+
+---
+
+> “Smart, automated resume feedback – bridging job seekers and recruiters.”
